@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="a2CS6XQjQhd05MdlmAoV" name="Page-1">
+        <mxGraphModel dx="1181" dy="523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="TiendaVirtual" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="40" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=diamond;startFill=1;startSize=20;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=diamond;startFill=1;startSize=20;" edge="1" parent="1" source="3" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="nombre - String" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="70" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="CRUD" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="110" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Producto" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="200" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="nombre- String&lt;br&gt;id- String&lt;br&gt;stock - int&lt;br&gt;talla - String&lt;br&gt;color- String&lt;br&gt;categoria - Categoria&lt;br&gt;fechalanzamiento-Date&lt;br&gt;precioventa-double&lt;br&gt;descripcion-String" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="230" width="130" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Setters, Getters&lt;br&gt;Equals(id)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="380" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Proovedor" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="200" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="nombre- String&lt;br&gt;id- String&lt;br&gt;direccion- String&lt;br&gt;numerocontacto- String" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="230" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Setters, Getters&lt;br&gt;Equals(id)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="310" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Categoria" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="520" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="CAMISETAS&lt;br&gt;PANTALONES&lt;br&gt;ZAPATOS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="540" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="1" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="490" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="*categoria" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="490" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="*" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="155" y="170" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="+Listaproductos" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="215" y="170" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="*" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="180" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="+Listaproovedores" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="170" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

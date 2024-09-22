@@ -1,7 +1,10 @@
 package co.edu.uniquindio.poo.model;
 
-import java.sql.Date;
+import java.util.Arrays;
+import java.util.Date;
 import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Agenda {
     public Contacto listacontactos[];
@@ -262,28 +265,28 @@ public void ImprimirContactosPosImpares(){
  * @return
  */
 public int obteneredadmasrepetida(){
-    int edadmasrepetida = 0;
-    int contadormasrepetida = 0;
-    int contador = 1;
+    int EdadMasRepetida = 0;
+    int ContadorMasRepetida = 0;
+    int Contador = 1;
     for (int i = 0; i < listacontactos.length; i++) {
         if (listacontactos[i] != null) {
             int edadi = listacontactos[i].getEdad();
-            contador = 0;
+            Contador = 0;
             for (int j = 0; j < listacontactos.length; j++) {
                 if (listacontactos[j]!= null){
-                int edadj = listacontactos[j].getEdad();
+                    int edadj = listacontactos[j].getEdad();
                 if (edadi == edadj){
-                    contador++;
+                    Contador++;
                 }
             }
                 }
-                if (contadormasrepetida < contador){
-                    edadmasrepetida = edadi;
-                    contadormasrepetida = contador;
+                if (ContadorMasRepetida < Contador){
+                    EdadMasRepetida = edadi;
+                    ContadorMasRepetida = Contador;
                 }
             }
         }
-    return edadmasrepetida;
+    return EdadMasRepetida;
 }
 
 /**
@@ -417,6 +420,92 @@ public void imprimirnombresalreves(){
         }
     }
 }
+
+/**
+ * Este metodo retorna una matriz con las listas de reuniones dependiendo de la fecha
+ * @return
+ */
+public Reunion[][] matrizreuniones(){
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+    int numerocolumnas = listareuniones.length;
+    Reunion matrizreuniones [][] = new Reunion[3][numerocolumnas];
+    for (int i = 0; i < listareuniones.length; i++) {
+        if (listareuniones[i] != null){
+            Date fecha = listareuniones[i].getFecha();
+            try {
+                if (fecha.after(sdf.parse("01-11-2022")) && fecha.before((sdf.parse("30-11-2022")))){
+                    for (int j = 0; j < matrizreuniones[0].length; j++) {
+                        if (matrizreuniones[0][j] == null) {
+                            matrizreuniones[0][j] = listareuniones[i];
+                            break;
+                        }
+                    }
+                }else if (fecha.after(sdf.parse("01-12-2022")) && fecha.before(sdf.parse("31-12-2022")) ) {
+                    for (int j = 0; j < matrizreuniones[1].length; j++) {
+                        if (matrizreuniones[1][j] == null) {
+                            matrizreuniones[1][j] = listareuniones[i];
+                            break;
+                        }
+                    }
+                }else if (fecha.after(sdf.parse("01-01-2023")) && fecha.before(sdf.parse("30-01-2023")) ) {
+                    for (int j = 0; j < matrizreuniones[2].length; j++) {
+                        if (matrizreuniones[2][j] == null) {
+                            matrizreuniones[2][j] = listareuniones[i];
+                            break;
+                        }
+                    }
+                }
+                }catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    return matrizreuniones;
 }
+
+/**
+ * Este metodo agrega un contacto dado a partir de un nombre de un grupo.
+ * @param nombregrupo
+ * @param contacto
+ */
+public void agregarcontactonombre(String nombregrupo, Contacto contacto){
+    for (int i = 0; i < listagrupos.length; i++) {
+        if (listagrupos[i] != null) {
+            if (listagrupos[i].getNombre() == nombregrupo) {
+                listagrupos[i].agregar_contacto(contacto);
+            }
+        }
+    }
+}
+
+/**
+ * Este metodo ordena los contactos con el metodo burbuja a partir de su edad
+ */
+public void OrdenamientoBurbujaEdadContactos(){
+    Contacto aux = new Contacto(null, null, null, null, null);
+    int edadi = 0;
+    int edadj = 0;
+    for (int i = 0; i < listacontactos.length-1; i++) {
+        for (int j = 0; j < listacontactos.length-1; j++) {
+            if (listacontactos[j]!= null && listacontactos[j+1] != null) {
+            edadi = listacontactos[j].getEdad();
+            edadj = listacontactos[j+1].getEdad();
+            if(edadi > edadj){
+                aux = listacontactos[j];
+                listacontactos[j] = listacontactos[j+1];
+                listacontactos[j+1] = aux;
+            }
+            }
+        }
+    }
+}
+
+public String listacontactostoString() {
+    return "Agenda [listacontactos=" + Arrays.toString(listacontactos) + "]";
+}
+
+}
+
 
 
